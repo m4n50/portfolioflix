@@ -6,12 +6,17 @@
 
   .btn{
     margin-top: 5px;
-    width: 170px;
+    width: 180px;
+    font-size: 12px;
+  }
+
+  .btn i{
+    margin-right: 4px;
   }
 }
 
 @media screen and (min-width: 1000px){
-  .desc{
+  .descricao{
     width: 50%;
   }
 }

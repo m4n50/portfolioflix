@@ -2,9 +2,9 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 :root{
- --ceu:rgb(140, 210, 240);
- --azul:rgb(10, 10, 180);
- --choco:  rgb(75, 45, 30);
+ --bg:rgb(40, 5, 5);
+ --azul:rgb(20, 20, 130);
+ --choco:  rgba(60, 30, 10,.5);
 }
 
 *{
@@ -15,9 +15,9 @@
 
 /* ref - basics elements - */
 body{
-  background: var(--ceu);
+  background: var(--bg);
   font-family: 'Arial', Times, serif;
-  color:rgb(236, 236, 236);
+  color:rgb(255, 255, 255);
 }
 
 header .container{
@@ -25,34 +25,31 @@ header .container{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-image: linear-gradient( rgb(212, 248, 255), rgb(140, 210, 240));
+  background-image: linear-gradient( rgb(100, 5, 5), var(--bg));
 }
 
 header .logo{
-  margin-left: 5px;
-  margin-bottom: 20px;
-  font-family: 'Pridi', serif;
-  font-size: 30px;
-  background: linear-gradient(to left, rgb(0,0,130), rgb(100, 200, 255));
+  margin: 10px;
+  font-family: 'Arial Black', Times;
+  font-size: 40px;
+  background: rgb(255, 220, 230);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/*
 header nav a{
   text-decoration: none;
-  color: var(--pinky);
   margin-right: 10px;
-  text-shadow: 1px 1px 2px var(--pinky);
+  color:rgb(220, 220, 220)
 }
 
 header nav a:hover{
-  color: var(--azul);
+  color: rgb(255, 220, 230);
   text-shadow: none;
-}*/
+}
 
 /* - main theme - */
-.main-movie{
+.filme-principal{
   font-size: 16px;
   background: linear-gradient(90deg, rgba(0,0,0,.80),rgba(0,0,0,0)100%), url('/img/ft_lauderdale.png');
   
@@ -64,21 +61,22 @@ header nav a:hover{
   justify-content: center;
   align-items: flex-start;
 }
-.main-movie *{
+.filme-principal *{
   margin-left:6px;
 }
 
-.main-movie .container{
+.filme-principal .container{
   width: 80%;
 }
 
-.main-movie .desc{
-  margin-top: 35px;
+.filme-principal .descricao{
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-.main-movie .tit{
+.filme-principal .titulo{
   margin-top: 10%;
-  font-size:35px;
+  font-size:  40px;
   font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
@@ -87,12 +85,13 @@ header nav a:hover{
   border: none;
   color: white;
 
-  padding: 8px 10px;
-  margin: 15px 20px 0 0;
-  font-size: 11px;
+  padding: 15px;
+  margin: 20px 20px 0 4px;
+  border-radius: 4px;
+  font-size: 16px;
 
   cursor: pointer;
-  transition: .4 ease all;
+  transition: .3s ease all;
 }
 
 .btn:hover{
@@ -101,7 +100,7 @@ header nav a:hover{
 }
 
 .btn i{
-  margin-right: 9px;
+  margin-right: 8px;
 }
 
 .box-film{
@@ -122,8 +121,7 @@ footer{
   background-color: var(--choco);
   margin-top: 30px;
   height: 30%;
-  font-size: 15%;
-  border-top: solid 3px;
+  font-size: .7em;
 }
 
 #rodape{
@@ -142,8 +140,8 @@ footer{
   margin-bottom: 35px;
 }
 
-.footer-div h3{
-  margin: 10px 0 30px;
+.footer-div h2{
+  margin: 10px 0 20px;
 }
 
 .footer-div p{
@@ -154,7 +152,6 @@ footer{
 
 .services li{
   list-style: none;
-  border-bottom: solid 1px rgb(248, 226, 164);
   padding: 10px;
 }
 
@@ -211,10 +208,7 @@ ul.social-icons {
     transition: .5s;
     background-color: transparent;
 }
-.fa-facebook:hover {
-    background-color: #3d5b99;
-    color:#fff;
-}
+
 .fa-twitter {
     padding:10px 12px;
     -o-transition:.5s;
